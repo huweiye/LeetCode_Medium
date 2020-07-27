@@ -1,0 +1,15 @@
+package WeekContest.num196;
+
+import java.util.Arrays;
+
+public class CanMakeArithmeticProgression {
+    public boolean canMakeArithmeticProgression(int[] arr) {
+        Arrays.sort(arr);
+        int temp=arr[1]-arr[0];
+        for(int i=2;i<arr.length;i++){
+            if(arr[i]-arr[i-1]!=temp) return false;
+        }
+        return true;
+
+    }
+}
